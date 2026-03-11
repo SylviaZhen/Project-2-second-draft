@@ -1,0 +1,45 @@
+body{
+margin:0;
+font-family:'Special Elite', monospace;
+background:url("../paperbg.png") center/cover no-repeat fixed;
+color:#111;
+}
+
+.container{
+max-width:800px;
+margin:auto;
+padding:60px 30px;
+}
+
+h1{
+font-weight:400;
+font-size:40px;
+margin-bottom:30px;
+}
+
+.poem{
+font-size:20px;
+line-height:1.7;
+}
+
+.kw{
+font-weight:bold;
+text-decoration:underline;
+cursor:pointer;
+color:#111;
+}
+
+.kw:hover{
+opacity:0.7;
+}
+
+.love{
+text-decoration-thickness:3px;
+}
+
+.back{
+display:inline-block;
+margin-bottom:20px;
+text-decoration:none;
+color:#444;
+}

@@ -1,0 +1,102 @@
+:root{
+  --white: rgba(255,255,255,.95);
+  --soft: rgba(255,255,255,.72);
+  --shadow: rgba(0,0,0,.35);
+}
+
+html, body{
+  width: 100%;
+  height: 100%;
+}
+
+body{
+  margin: 0;
+  font-family: 'Special Elite', monospace;
+  background: black;
+  overflow: hidden;
+  color: var(--white);
+}
+
+#bgVideo{
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.overlay{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.28);
+  z-index: 1;
+}
+
+.content{
+  position: relative;
+  z-index: 2;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px;
+}
+
+h1{
+  margin: 0;
+  font-size: clamp(4rem, 9vw, 7rem);
+  font-weight: 400;
+  letter-spacing: 4px;
+  text-shadow: 0 10px 30px var(--shadow);
+}
+
+.subtitle{
+  margin-top: 18px;
+  font-size: 1.25rem;
+  color: var(--soft);
+  text-shadow: 0 6px 20px var(--shadow);
+}
+
+.sound-toggle{
+  margin-top: 44px;
+  border: 1px solid rgba(255,255,255,.35);
+  background: rgba(255,255,255,.08);
+  color: var(--white);
+  padding: 12px 18px;
+  font-family: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 999px;
+  backdrop-filter: blur(2px);
+  transition: background .2s ease, transform .2s ease, opacity .2s ease;
+}
+
+.sound-toggle:hover{
+  background: rgba(255,255,255,.14);
+  transform: translateY(-1px);
+}
+
+.return{
+  margin-top: 34px;
+  color: var(--soft);
+  text-decoration: none;
+  font-size: 1rem;
+  transition: opacity .2s ease, color .2s ease;
+}
+
+.return:hover{
+  color: var(--white);
+}
+
+.hidden{
+  opacity: 0;
+  pointer-events: none;
+}
+
+.show{
+  opacity: 1;
+  pointer-events: auto;
+}
